@@ -1,0 +1,1 @@
+// for activating tailwindcss intellisense

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detectify</title>
+    <link rel="icon" href="../static/eye-bold.svg" type="image/x-icon" />
+
+    {# Dependencies #}
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="../static/style.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}' id="main">
+    <div class="h-dvh full w-full">
+      {# Fixed top bar #}
+      <div
+        class="fixed top-0 w-full bg-base-100 h-12 flex justify-center items-center"
+      >
+          <a href="{% url "index" %}" class="flex gap-2" >
+            <img src="../static/eye-bold.svg" alt="eye-bold-icon" class="" />
+            <h1 class="text-2xl font-normal font-mono text-base-content">
+              Detectify
+            </h1>
+          </a>
+      </div>
+
+      <div class="mt-12">
+        {% block content %} {# Content here #} {% endblock content %}
+      </div>
+    </div>
+  </body>
+</html>

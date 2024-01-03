@@ -1,0 +1,37 @@
+{% extends "./base.html" %} {% block content %}
+<div class="flex flex-col gap-12 justify-center items-center py-6">
+  {% if filename %}
+  <div class="flex flex-col items-center">
+    <h2 class="text-xl font-mono text-center">Result</h2>
+    <p class="flex-wrap w-5/6 sm:w-[32rem] pt-6">
+      Description here. Lorem ipsum dolor, sit amet consectetur adipisicing
+      elit. Fugiat, nam.
+    </p>
+  </div>
+
+  <div
+    class="flex flex-col justify-center items-center w-5/6 sm:w-[32rem] text-center"
+  >
+    <img
+      class="object-cover pb-3"
+      src="/result/{{ filename }}"
+      alt="provided-img"
+    />
+  </div>
+  {% else %}
+  <div class="flex flex-col items-center">
+    <h2 class="text-xl font-mono text-center">Result</h2>
+  </div>
+  <p class="text-center">Provided image is not supported</p>
+  {% endif %}
+
+  <button
+    class="btn btn-primary"
+    hx-get="{% url 'find_your_perfect_glasses' %}"
+    hx-target="#main"
+    hx-swap="outerHTML"
+  >
+    Submit Again
+  </button>
+</div>
+{% endblock content %}

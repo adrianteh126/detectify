@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.html": "jinja-html",
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "django-html": "html",
+    "plaintext": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true,
+}

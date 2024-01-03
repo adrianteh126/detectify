@@ -1,0 +1,23 @@
+{% extends "./base.html" %} {% block content %}
+<div class="flex flex-col gap-12 justify-center items-center py-6">
+  {# Description #}
+  <p class="flex-wrap w-5/6 sm:w-[32rem]">
+    Unlock tailored insights, like finding ideal glasses shapes, and anticipate more modules. Elevate your choices with Detectify, where smart suggestions meet individual style.
+  </p>
+
+  {# Categories #}
+  <div>
+    <h2 class="text-xl font-mono text-center">Categories</h2>
+    <ul class="flex flex-col pt-6 text-center gap-3">
+      <li>
+        <a href="{% url "find_your_perfect_glasses" %}" class="hover:text-accent">
+          Find Your Perfect Glasses
+        </a>
+      </li>
+      <li>
+          <p>More Coming Soon ...</p>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock content %}
