@@ -7,6 +7,8 @@ name = "pypi"
 django = "==4.1.3"
 python-dotenv = "*"
 roboflow = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 

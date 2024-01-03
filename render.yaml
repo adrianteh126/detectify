@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: detectify
+    buildCommand: './build.sh'
+    env: python
+    startCommand: 'gunicorn core.wsgi:application'
