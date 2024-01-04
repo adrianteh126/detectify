@@ -1,27 +1,46 @@
 {% extends "./base.html" %} {% block content %}
 <div class="flex flex-col gap-12 justify-center items-center py-6">
   {% if filename %}
-  <div class="flex flex-col items-center">
-    <h2 class="text-xl font-mono text-center">Result</h2>
-    <p class="flex-wrap w-5/6 sm:w-[32rem] pt-6 text-center">
-      Below is the class of your face shape and the confidence level.
-    </p>
-  </div>
+  <div class="flex flex-col items-center text-center">
+    <h2 class="text-xl font-mono">Result</h2>
+    <div class="flex-wrap w-5/6 sm:w-[32rem] pt-6">
+      <p>{{ info.description }}</p>
+    </div>
 
-  <div
-    class="flex flex-col justify-center items-center w-5/6 sm:w-[32rem] text-center"
-  >
-    <img
-      class="object-cover pb-3"
-      src="/result/{{ filename }}"
-      alt="provided-img"
-    />
+    <div
+      class="flex flex-col justify-center items-center w-5/6 sm:w-[32rem] text-center"
+    >
+      <img
+        class="object-cover py-3"
+        src="/result/{{ filename }}"
+        alt="provided-img"
+      />
+    </div>
+
+    <div
+      class="flex flex-col justify-center items-center w-5/6 sm:w-[32rem] text-center"
+    >
+      <p class="mb-3">{{ info.glasses.description}}</p>
+      <div class="divider divider-neutral">
+        <img
+          class="bg-primary px-3 rounded-lg"
+          src="{{ info.glasses.image }}"
+          alt="suggested-glasses"
+        />
+      </div>
+
+      <ul class="mt-3">
+        {% for type in info.glasses.types %}
+        <li>{{ type }}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   {% else %}
-  <div class="flex flex-col items-center">
-    <h2 class="text-xl font-mono text-center">Result</h2>
+  <div class="flex flex-col items-center text-center">
+    <h2 class="text-xl font-mono">Result</h2>
   </div>
-  <p class="text-center">Provided image is not supported</p>
+  <p>Provided image is not supported</p>
   {% endif %}
 
   <button

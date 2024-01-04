@@ -1,0 +1,62 @@
+{
+  "heart": {
+    "description": "Heart shaped faces are widest at the brow, narrowing down through to the chin with high cheekbones. This face shape can be either long or round.",
+    "glasses": {
+      "description": "When finding the best glasses for heart shaped faces, get playful with opposites and look for winged-out or wide frames that jut out slightly wider than the forehead, with rounded bases to balance and complement features",
+      "types": [
+        "Rectangular Glasses - Bring balance between forehead and chin",
+        "Round Glasses - Soften angular features",
+        "Aviator Glasses - Add width and contrast"
+      ],
+      "image": "https://img.ebdcdn.com/image/upload/static/images/discover/tips/heart-shaped.png"
+    }
+  },
+  "oblong": {
+    "description": "Oblong faces are widest on the bottom and narrowest on top.",
+    "glasses": {
+      "description": "To compliment your features and add contrast, look for frames that play with opposites (featuring wider top and narrower bottoms) and mix round and angular shapes",
+      "types": [
+        "Aviator Glasses - Curved bottom softens cheekbones",
+        "Cat Eyes Glasses - Draw attention to your eyes",
+        "Browline Glasses - Defined brow line brings definition"
+      ],
+      "image": "https://img.ebdcdn.com/image/upload/static/images/discover/tips/triangle.png"
+    }
+  },
+  "oval": {
+    "description": "Oval shaped faces have a narrow forehead and slightly narrow chin, which typically creates a long face silhouette.  ",
+    "glasses": {
+      "description": "For an oval face, choose glasses that emphasize the natural balance and add angles to your face's subtle curves. Look for frames that are as wide as the widest part of your face, which is typically the area around the eyes, in a shape that adds subtle contrast to your features",
+      "types": [
+        "Square / Rectangular Glasses - Add sharper angles for definition",
+        "Geometric Glasses - Get playful with shapes and angular contrast",
+        "Browline Glasses - Wide frames compliment a narrow silhouette"
+      ],
+      "image": "https://img.ebdcdn.com/image/upload/static/images/discover/tips/oval.png"
+    }
+  },
+  "round": {
+    "description": "Round faces are all soft curves and smooth lines, roughly the same width from the jaw up through to the brow. With round faces, the cheeks are usually full and the chin is rounded.",
+    "glasses": {
+      "description": "When choosing glasses for round face shapes, select frames that add definition. Choose bold, angular glasses with clean lines",
+      "types": [
+        "Rectangular Glasses - Add contrast to facial structure",
+        "Angular / Geometric Glasses - Add sharp, distinct lines to create balance",
+        "Upswept Glasses - Such as cat-eye or browline. Draw attention to your eyes"
+      ],
+      "image": "https://img.ebdcdn.com/image/upload/static/images/discover/tips/round.png"
+    }
+  },
+  "square": {
+    "description": "A square face has more angular lines with equally wide cheekbones, forehead and jav.",
+    "glasses": {
+      "description": "Look for rounded, thinner frames that are wider than your cheekbones, while remaining proportional to the length and width of your face",
+      "types": [
+        "Oval Glasses - Soften and balance defined square face lines",
+        "Round Glasses - Bring contrast to angular features",
+        "Coloured Glasses - Draw attention to the eyes"
+      ],
+      "image": "https://img.ebdcdn.com/image/upload/static/images/discover/tips/square.png"
+    }
+  }
+}

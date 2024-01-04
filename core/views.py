@@ -4,6 +4,7 @@ from .services import (
     classify_face_shape_and_save,
     capture_classify_face_shape_and_save,
     classify_face_shape_by_url,
+    get_glasses_info,
 )
 from django.views.decorators.http import require_GET, require_POST
 import base64
@@ -46,15 +47,26 @@ def result(request: HttpRequest, imageUrl=None):
     return render(request, "result.html", context)
 
 
+@require_GET
+def result_upload(request: HttpRequest, filename=None, shape=None, confidence=None):
+    filename = "2024_01_03_18_55_27.png"
+    shape = "square"
+    confidence = 0.9695
+    info = get_glasses_info(shape)
+    context = {"filename": filename, "info": info}
+    return render(request, "result-upload.html", context)
+
+
 @require_POST
 def upload_image(request: HttpRequest):
     uploaded_image = request.FILES["uploaded_image"]
     try:
-        filename = classify_face_shape_and_save(uploaded_image)
-        context = {"filename": filename}
+        filename, shape = classify_face_shape_and_save(uploaded_image)
+        info = get_glasses_info(shape)
+        context = {"filename": filename, "info": info}
         return render(request, "result-upload.html", context)
     except:
-        context = {"filename": None}
+        context = {"filename": None, "info": None}
         return render(request, "result-upload.html", context)
 
 
@@ -68,9 +80,10 @@ def captured_image(request: HttpRequest):
     # Decode the base64 data
     image_data = base64.b64decode(unquoted_data)
     try:
-        filename = capture_classify_face_shape_and_save(image_data)
-        context = {"filename": filename}
+        filename, shape = capture_classify_face_shape_and_save(image_data)
+        info = get_glasses_info(shape)
+        context = {"filename": filename, "info": info}
         return render(request, "result-upload.html", context)
     except:
-        context = {"filename": None}
+        context = {"filename": None, "info": None}
         return render(request, "result-upload.html", context)
