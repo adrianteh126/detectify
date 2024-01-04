@@ -14,7 +14,6 @@ urlpatterns = [
     ),
     path("submit_image_url/", views.submit_image_url, name="submit_image_url"),
     path("result/", views.result, name="result"),
-    path("result_upload/", views.result_upload, name="result_upload"),
     path("upload_image/", views.upload_image, name="upload_image"),
     path("captured_image/", views.captured_image, name="captured_image"),
 ]

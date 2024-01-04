@@ -47,16 +47,6 @@ def result(request: HttpRequest, imageUrl=None):
     return render(request, "result.html", context)
 
 
-@require_GET
-def result_upload(request: HttpRequest, filename=None, shape=None, confidence=None):
-    filename = "2024_01_03_18_55_27.png"
-    shape = "square"
-    confidence = 0.9695
-    info = get_glasses_info(shape)
-    context = {"filename": filename, "info": info}
-    return render(request, "result-upload.html", context)
-
-
 @require_POST
 def upload_image(request: HttpRequest):
     uploaded_image = request.FILES["uploaded_image"]
